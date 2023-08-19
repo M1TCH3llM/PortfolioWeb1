@@ -5,8 +5,9 @@
 }
 
 header {
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
   display: flex;
+  justify-content: space-around;
   position: relative;
 }
 
@@ -31,8 +32,8 @@ a {
 }
 
 div {
-border: 5px solid black;
-  /* position: relative; */
+/* border: 5px solid black; */
+  position: relative;
   margin: 1rem 2rem;
   width: 50%;
   height: 70rem;
@@ -40,33 +41,35 @@ border: 5px solid black;
 }
 
 figure {
-  border: 5px solid black;
+  border: 1px solid black;
   background-color: whitesmoke;
   box-shadow: 10px 10px 30px black;
   height: 47rem;
   width: 40rem;
-  margin: 4rem 0rem;
+  margin: 3rem 0rem;
   position: absolute;
+  top: 4rem;
+  right: 2rem;
 }
 
 #figure1 {
-  left: 55rem;
+  /* left: 55rem; */
   transform: rotate(2deg);
 }
 
 #figure2 {
-  left: 56rem;
-  top: 1rem;
+  /* left: 56rem;
+  top: 1rem; */
   transform: rotate(4deg);
 }
 
 #figure3 {
-  left: 54rem;
+  /* left: 54rem; */
   transform: rotate(-7deg);
 }
 
 #figure4 {
-  left: 54rem;
+  /* left: 54rem; */
   transform: rotate(-3deg);
 }
 
