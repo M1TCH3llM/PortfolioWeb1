@@ -26,7 +26,6 @@ header {
 }
 
 nav {
-  font-size: 17rem;
   width: 10%;
   margin-top: 6rem;
 }
@@ -37,12 +36,19 @@ li {
   color: black;
 }
 
-a {
-  color: black;
+.button {
+  color: darkgray;
+  font-size: 6rem;
   text-decoration: none;
 }
 
-.headdiv {
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 3rem;
+}
+
+header div {
   position: relative;
   margin: 1rem 2rem;
   width: 50%;
@@ -50,32 +56,36 @@ a {
 }
 
 figure {
-  border: 1px solid black;
-  background-color: whitesmoke;
-  box-shadow: 5px 5px 10px black;
+  background-image: url("../assets/PolBlank.png");
+  background-size: 100%;
   height: 45rem;
   width: 37rem;
   margin: 3rem 0rem;
   top: 4rem;
   right: 2rem;
+  filter: drop-shadow(5px 5px 10px black);
 }
 
 #figure1 {
-  transform: rotate(2deg);
+  background-image: url("../assets/About.png");
+  transform: rotate(0deg);
   position: absolute;
 }
 
 #figure2 {
+  background-image: url("../assets/Port.png");
   transform: rotate(4deg);
   position: absolute;
 }
 
 #figure3 {
+  background-image: url("../assets/Phone.png");
   transform: rotate(-7deg);
   position: absolute;
 }
 
 #figure4 {
+  background-image: url("../assets/Resume1.png");
   transform: rotate(-3deg);
   position: absolute;
 }
@@ -159,10 +169,22 @@ footer {
   padding: 1rem;
   margin-top: 4rem;
 }
-/* @media (max-width: 750px) {
-  header, #about {
-    flex-direction: column;
-    align-content: center;
-    text-align: center;
-  }
-} */
+
+/* Header button effect */
+
+.button {
+  transition-duration: 0.4s;
+  position: relative;
+}
+
+.button:hover {
+  color: black;
+  font-size: 9rem;
+}
+
+.button:hover::after {
+  content: "🖍️";
+  position: absolute;
+  top: 0;
+  right: -9rem;
+}
