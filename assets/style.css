@@ -4,10 +4,9 @@
   font-size: 62.5%;
 }
 
-nav,
-h2,
-footer {
+body {
   font-family: "Permanent Marker", cursive;
+  background-color: whitesmoke;
 }
 
 h2 {
@@ -55,6 +54,7 @@ header div {
   height: 70rem;
 }
 
+img,
 figure {
   background-size: 100%;
   height: 45rem;
@@ -65,38 +65,28 @@ figure {
   filter: drop-shadow(5px 5px 10px black);
 }
 
-#figure1 {
-  background-image: url("../assets/About.png");
-  transform: rotate(0deg);
+figure {
   position: absolute;
 }
 
-img {
-  background-size: 100%;
-  height: 45rem;
-  width: 37rem;
-  margin: 3rem 0rem;
-  top: 4rem;
-  right: 2rem;
-  filter: drop-shadow(5px 5px 10px black);
+#figure1 {
+  background-image: url("../assets/About.png");
+  transform: rotate(0deg);
 }
 
 #figure2 {
   background-image: url("../assets/Port.png");
   transform: rotate(4deg);
-  position: absolute;
 }
 
 #figure3 {
   background-image: url("../assets/Phone.png");
   transform: rotate(-7deg);
-  position: absolute;
 }
 
 #figure4 {
   background-image: url("../assets/Resume1.png");
   transform: rotate(-3deg);
-  position: absolute;
 }
 
 #abdiv {
@@ -208,4 +198,79 @@ header:has(#list3:hover) #figure3 {
 
 header:has(#list4:hover) #figure4 {
   z-index: 100;
+}
+
+/* media */
+
+@media (max-width: 1100px) {
+  #portdiv img {
+    width: 30rem;
+    height: 38rem;
+  }
+}
+
+@media (max-width: 950px) {
+  header,
+  article,
+  #about,
+  #contact,
+  #contact ul,
+  #portdiv {
+    display: block;
+  }
+  nav {
+    margin-top: 6rem;
+    width: 100%;
+    text-align: center;
+  }
+  figure {
+    background-size: 100%;
+    height: 36rem;
+    width: 30rem;
+    margin: 3rem 0rem;
+    top: 0rem;
+    right: 4rem;
+    filter: drop-shadow(5px 5px 10px black);
+  }
+  header div {
+    width: 100%;
+    margin: 0;
+    height: 45rem;
+  }
+  #about {
+    height: auto;
+    text-align: center;
+    margin: 1rem;
+  }
+
+  #abdiv {
+    width: auto;
+    height: auto;
+  }
+
+  #portdiv,
+  #portfolio {
+    text-align: center;
+    margin: 0;
+    height: Auto;
+  }
+
+  #portfolio h2,
+  #resume h2 {
+    margin-left: 0;
+  }
+
+  a {
+    font-size: 2rem;
+  }
+
+  #resume {
+    text-align: center;
+  }
+
+  footer {
+    font-size: 3rem;
+    height: 4rem;
+    padding: 0.5rem;
+  }
 }
